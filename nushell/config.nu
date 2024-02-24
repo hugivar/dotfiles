@@ -840,8 +840,16 @@ $env.config = {
     ]
 }
 
+let posh_dir = (brew --prefix oh-my-posh | str trim)
+let posh_theme = $'($posh_dir)/themes/'
+
+$env.PROMPT_COMMAND = { || oh-my-posh prompt print primary --config $'($posh_theme)/zash.omp.json' }
+
+source ~/dotfiles/.zoxide.nu
+
 # Alias
 alias ll = ls -la
+alias cd = z
 
 # Git
 alias ga = git add
@@ -863,8 +871,3 @@ alias rm = rm -i
 alias cp = cp -i
 alias mv = mv -i
 alias kill = sudo kill
-
-let posh_dir = (brew --prefix oh-my-posh | str trim)
-let posh_theme = $'($posh_dir)/themes/'
-
-$env.PROMPT_COMMAND = { || oh-my-posh prompt print primary --config $'($posh_theme)/zash.omp.json' }
