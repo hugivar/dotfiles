@@ -14,8 +14,8 @@ echo "Nushell setup complete"
 echo "Setting up Stow symlinks"
 
 rm -rf ~/.config/wezterm
-rm -rf ~/dotfiles/.DS_Store
-rm -rf ~/.config/.DS_Store
+# rm -rf ~/dotfiles/.DS_Store
+# rm -rf ~/.config/.DS_Store
 
 stow .
 
