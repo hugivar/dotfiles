@@ -3,8 +3,10 @@
 # Setup Nushell
 echo "Setting up Nushell"
 
-rm -rf ~/Library/Application\ Support/nushell
-mkdir ~/Library/Application\ Support/nushell
+## Maintain history
+rm -f ~/Library/Application\ Support/nushell/config.nu
+rm -f ~/Library/Application\ Support/nushell/env.nu
+
 cp ~/dotfiles/nushell/default_config.nu ~/Library/Application\ Support/nushell/config.nu
 cp ~/dotfiles/nushell/env.nu ~/Library/Application\ Support/nushell/env.nu
 

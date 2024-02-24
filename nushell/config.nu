@@ -840,12 +840,13 @@ $env.config = {
     ]
 }
 
-let posh_dir = (brew --prefix oh-my-posh | str trim)
-let posh_theme = $'($posh_dir)/themes/'
-
-$env.PROMPT_COMMAND = { || oh-my-posh prompt print primary --config $'($posh_theme)/zash.omp.json' }
+# let posh_dir = (brew --prefix oh-my-posh | str trim)
+# let posh_theme = $'($posh_dir)/themes/'
+# $env.PROMPT_COMMAND = { || oh-my-posh prompt print primary --config $'($posh_theme)/zash.omp.json' }
 
 source ~/dotfiles/.zoxide.nu
+
+use ~/dotfiles/.config/starship/init.nu
 
 # Alias
 alias ll = ls -la
