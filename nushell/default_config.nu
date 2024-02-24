@@ -1,0 +1,1 @@
+nu --config ~/dotfiles/nushell/config.nu
